@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body>
+<body class="ai-body">
     <div id="header"></div>
 
     <script>
@@ -15,5 +15,64 @@
             document.getElementById("header").innerHTML = data;
         });
     </script>
+    <!-- SECTIE 1: Wat is AI? -->
+    <section class="ai-section">
+        <div class="ai-intro">
+            <div class="ai-text">
+                <h2>Wat is AI?</h2>
+                <p>Artificiële intelligentie (AI) is technologie waarmee computers taken uitvoeren die normaal menselijke intelligentie vereisen. Denk aan teksten schrijven, afbeeldingen herkennen of beslissingen nemen. AI leert van enorme hoeveelheden data en wordt steeds slimmer.</p>
+            </div>
+            <div class="ai-img-box">
+                <img src="OVER-AI.png" alt="Wat is AI" onerror="this.style.display='none'; this.parentElement.classList.add('img-placeholder')">
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTIE 2: Voordelen en Nadelen -->
+    <section class="ai-voordelen-sectie">
+        <div class="sectie-label">
+            <h3>Voordelen en Nadelen</h3>
+        </div>
+
+        <!-- Voordelen -->
+        <div class="ai-blok">
+            <h4 class="blok-titel voordeel-kleur">✓ Voordelen</h4>
+            <div class="ai-intro">
+                <div class="ai-text">
+                    <ul class="ai-lijst voordeel">
+                        <li>AI kan taken veel sneller uitvoeren dan mensen</li>
+                        <li>Het helpt bij het opsporen van ziektes en medische diagnoses</li>
+                        <li>AI maakt het leren makkelijker met persoonlijke uitleg</li>
+                        <li>Het kan nepnieuws detecteren en markeren</li>
+                    </ul>
+                </div>
+                <div class="ai-img-box">
+                    <img src="AI-VOORDELEN.png" alt="Voordelen van AI" onerror="this.style.display='none'; this.parentElement.classList.add('img-placeholder')">
+                </div>
+            </div>
+        </div>
+        
+
+        <!-- Nadelen -->
+        <div class="ai-blok">
+            <h4 class="blok-titel nadeel-kleur">✗ Nadelen</h4>
+            <div class="ai-intro">
+                <div class="ai-text">
+                    <ul class="ai-lijst nadeel">
+                        <li>AI kan gebruikt worden om nepnieuws en deepfakes te maken</li>
+                        <li>Het kan banen overnemen van mensen</li>
+                        <li>AI-systemen kunnen vooroordelen bevatten uit trainingsdata</li>
+                        <li>Privacy gevaren door het verzamelen van veel persoonlijke data</li>
+                    </ul>
+                </div>
+                <div class="ai-img-box">
+                    <img src="AI-NADELEN.png" alt="Nadelen van AI" onerror="this.style.display='none'; this.parentElement.classList.add('img-placeholder')">
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+
 </body>
 </html>

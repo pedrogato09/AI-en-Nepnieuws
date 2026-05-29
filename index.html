@@ -6,10 +6,10 @@
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="home-body">
     
     <div id="header"></div>
-
+    
     <script>
         fetch("header.html")
         .then(response => response.text())
@@ -17,5 +17,24 @@
             document.getElementById("header").innerHTML = data;
         });
     </script>
-</body>
+    <section class="hero">
+    <h1>Welkom op FakeOrFact</h1>
+    <p>Leer hoe je nepnieuws en AI-content herkent</p>
+</section>
+    <div class="content-wrapper">
+        <div class="text-section">
+        <h3>waar gaat ovs website over</h3>
+        <p class="ovelig">Welkom op onze website! Deze site staat volledig in het teken van nepnieuws en AI
+
+In de wereld van vandaag wordt informatie razendsnel gedeeld via sociale media. Soms is die informatie echt, maar steeds vaker komen we nepnieuws tegen. Met de opkomst van slimme AI-technologie is het tegenwoordig nóg makkelijker geworden om teksten, foto's en video's te maken die net echt lijken, maar dat niet zijn. <br>
+
+Als toekomstige Software Developers bouwen wij de technologie van morgen. Daarom vinden wij het belangrijk om te begrijpen hoe informatie werkt, wat de impact van nepnieuws is op de samenleving en hoe we AI op een verantwoorde manier kunnen gebruiken. Met deze website willen we jou informeren, uitleg geven en helpen om kritisch te blijven nadenken over wat je online leest en ziet.</p>
+    </div>
+    <div class="image-container">
+        <img class="image-home" src="home-page2.png" alt="Home Image">
+    </div>
+</div>
+<div class="button-wrapper">
+    <a href="quiz.html" class="quiz-button">Doe de quiz! →</a>
+</div></body>
 </html>
