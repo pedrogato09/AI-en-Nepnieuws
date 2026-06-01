@@ -4,16 +4,107 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="header"></div>
+    <header class="header">
+    <nav class="navbar">
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="Nepnieuws.html">Nepnieuws</a></li>
+            <li><a href="over-ai.html">Over AI</a></li>
+            <li><a href="fact-check.html">Fact Check</a></li>
+            <li><a href="quiz.html">Quiz</a></li>
+            <li><a href="tips.html">Tips</a></li>
+            <li><a href="over-ons.html">Over ons</a></li>
+        </ul>
+         <div class="logo">AI Detect</div>
+    </nav>
+</header>
+    <main class="tips-page">
+        <div class="tips-wrapper">
+            <h1>Feedback & Tips</h1>
+            <p>Heb je een tip voor deze website? Typ hem hieronder en druk op Verzenden. Je tip wordt direct zichtbaar in de lijst.</p>
+
+            <form id="tipForm" class="tip-form">
+                <textarea id="tipInput" placeholder="Typ hier je tip..." rows="4"></textarea>
+                <div class="form-actions">
+                    <button type="submit" class="btn">Verzenden</button>
+                    <button type="button" id="removeLast" class="btn secondary">Verwijder laatste tip</button>
+                </div>
+            </form>
+
+            <section>
+                <h2>Alle tips</h2>
+                <div id="tipsList" class="tips-list" aria-live="polite"></div>
+            </section>
+        </div>
+    </main>
 
     <script>
-        fetch("header.html")
-        .then(response => response.text())
-        .then(data => {
-            document.getElementById("header").innerHTML = data;
+        // Tips - LocalStorage based
+        const form = document.getElementById('tipForm');
+        const input = document.getElementById('tipInput');
+        const tipsList = document.getElementById('tipsList');
+
+        function loadTips(){
+            const raw = localStorage.getItem('siteTips');
+            return raw ? JSON.parse(raw) : [];
+        }
+
+        function saveTips(tips){
+            localStorage.setItem('siteTips', JSON.stringify(tips));
+        }
+
+        function renderTips(){
+            const tips = loadTips();
+            tipsList.innerHTML = '';
+            if(tips.length === 0){
+                tipsList.innerHTML = '<div class="empty">Nog geen tips — wees de eerste!</div>';
+                return;
+            }
+            tips.slice().reverse().forEach(t => {
+                const el = document.createElement('div');
+                el.className = 'tip-item';
+                const time = new Date(t.ts).toLocaleString();
+                el.innerHTML = `<div class="tip-text">${escapeHtml(t.text)}</div><div class="tip-meta">${time}</div>`;
+                tipsList.appendChild(el);
+            });
+        }
+
+        function escapeHtml(s){
+            return s.replace(/[&<>\"']/g, function(c){
+                return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;' }[c];
+            });
+        }
+
+        form.addEventListener('submit', function(e){
+            e.preventDefault();
+            const val = input.value.trim();
+            if(!val) return;
+            const tips = loadTips();
+            tips.push({text: val, ts: Date.now()});
+            saveTips(tips);
+            input.value = '';
+            renderTips();
+            input.focus();
         });
+
+        // Handler to remove the last tip
+        document.getElementById('removeLast').addEventListener('click', function(){
+            const tips = loadTips();
+            if(!tips || tips.length === 0){
+                alert('Er zijn geen tips om te verwijderen.');
+                return;
+            }
+            if(!confirm('Weet je zeker dat je de laatste tip wilt verwijderen?')) return;
+            tips.pop();
+            saveTips(tips);
+            renderTips();
+        });
+
+        // render on load
+        renderTips();
     </script>
 </body>
 </html>

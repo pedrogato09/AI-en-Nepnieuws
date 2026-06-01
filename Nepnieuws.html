@@ -1,19 +1,83 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="NL">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <title>Nepnieuws</title>
 </head>
 <body>
-    <div id="header"></div>
+    <header class="header">
+        <nav class="navbar">
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="Nepnieuws.html">Nepnieuws</a></li>
+                <li><a href="over-ai.html">Over AI</a></li>
+                <li><a href="fact-check.html">Fact Check</a></li>
+                <li><a href="quiz.html">Quiz</a></li>
+                <li><a href="tips.html">Tips</a></li>
+                <li><a href="over-ons.html">Over ons</a></li>
+            </ul>
+            <div class="logo">AI Detect</div>
+        </nav>
+    </header>
 
-    <script>
-        fetch("header.html")
-        .then(response => response.text())
-        .then(data => {
-            document.getElementById("header").innerHTML = data;
-        });
-    </script>
+    <main class="nepnieuws">
+        <section class="hero-section">
+            <div class="hero-text">
+                
+                <p>Nepnieuws is grofweg onder te verdelen in drie vormen, elk met een eigen doel.</p>
+                <p>De eerste vorm is volledig gefabriceerd nieuws, waarbij verhalen en claims van A tot Z worden verzonnen om angst te zaaien of politieke schade aan te richten.</p>
+                <p>Veel subtieler is de tweede vorm: gemanipuleerde en misleidende media. Hierin wordt een kern van de waarheid gebruikt, maar worden bestaande foto's, cijfers of video’s (zoals deepfakes) bewust bewerkt of uit hun context gerukt om mensen te misleiden.</p>
+                <p>Tot slot is er clickbait en commerciële misleiding, waarbij sensationele en overdreven koppen worden ingezet met als enig doel om clicks te genereren en zo snel advertentiegeld te verdienen.</p>
+            </div>
+            <div class="hero-image">
+                <img src="nepnieuws image.webp" alt="Voorbeeld van nepnieuws foto">
+            </div>
+        </section>
+
+        <h2>Soorten nepnieuws</h2>
+
+        <div class="flashcard-container">
+            <div class="flashcard">
+                <div class="flashcard-inner">
+                    <div class="flashcard-front">
+                        <h3>Volledig gefabriceerd nieuws</h3>
+                    </div>
+                    <div class="flashcard-back">
+                        <p><strong>Wat?</strong> Van A tot Z verzonnen verhalen zonder kern van waarheid.</p>
+                        <p><strong>Doel?</strong> Angst/woede opwekken of politieke schade aanrichten.</p>
+                        <p><strong>Voorbeeld?</strong> Een nepbericht dat een BN'er is overleden.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flashcard">
+                <div class="flashcard-inner">
+                    <div class="flashcard-front">
+                        <h3>Gemanipuleerde media</h3>
+                    </div>
+                    <div class="flashcard-back">
+                        <p><strong>Wat?</strong> Bestaande beelden of cijfers bewust bewerken of verdraaien.</p>
+                        <p><strong>Doel?</strong> Mensen subtiel misleiden met een kern van waarheid.</p>
+                        <p><strong>Voorbeeld?</strong> Oude foto's gebruiken voor een nieuw protest, of deepfakes.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flashcard">
+                <div class="flashcard-inner">
+                    <div class="flashcard-front">
+                        <h3>Clickbait & misleiding</h3>
+                    </div>
+                    <div class="flashcard-back">
+                        <p><strong>Wat?</strong> Sensationele of overdreven koppen die de lading niet dekken.</p>
+                        <p><strong>Doel?</strong> Advertentiegeld verdienen door clicks te verzamelen.</p>
+                        <p><strong>Voorbeeld?</strong> "Je raadt NOOIT wie er gisteravond is opgepakt!"</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
 </body>
 </html>
