@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body>
+<body class="fc-body">
     <div id="header"></div>
 
     <script>
@@ -15,5 +15,79 @@
             document.getElementById("header").innerHTML = data;
         });
     </script>
+    <main class="fc-wrapper">
+ 
+        <!-- Titel -->
+        <div class="fc-header">
+            <span class="badge">Hoe werkt het?</span>
+            <h1>Fact-Check</h1>
+            <p>Volg deze 4 stappen om te controleren of een nieuwsbericht echt of nep is.</p>
+        </div>
+ 
+        <div class="fc-grid">
+ 
+            <!-- Stap 1 -->
+            <div class="fc-card" style="animation-delay: 0.1s">
+                <div class="fc-card-icon">🔍</div>
+                <h3>Stap 1 — Controleer de bron</h3>
+                <p>Kijk wie het artikel heeft geschreven. Is het een bekende nieuwssite? Heeft de schrijver een naam? Zoek de website op en kijk of het betrouwbaar is.</p>
+            </div>
+ 
+            <!-- Stap 2 -->
+            <div class="fc-card" style="animation-delay: 0.2s">
+                <div class="fc-card-icon">📅</div>
+                <h3>Stap 2 — Kijk naar de datum</h3>
+                <p>Oud nieuws wordt soms opnieuw gedeeld alsof het nieuw is. Controleer altijd wanneer het artikel is gepubliceerd voordat je het deelt.</p>
+            </div>
+ 
+            <!-- Stap 3 -->
+            <div class="fc-card" style="animation-delay: 0.3s">
+                <div class="fc-card-icon">🔗</div>
+                <h3>Stap 3 — Vergelijk met andere bronnen</h3>
+                <p>Zoek het onderwerp op bij andere nieuwssites. Als maar één site iets meldt en de rest niet, is het verdacht. Betrouwbaar nieuws staat op meerdere plekken.</p>
+            </div>
+ 
+            <!-- Stap 4 -->
+            <div class="fc-card" style="animation-delay: 0.4s">
+                <div class="fc-card-icon">🖼️</div>
+                <h3>Stap 4 — Controleer afbeeldingen</h3>
+                <p>Foto's worden vaak uit context gehaald. Gebruik Google Afbeeldingen om te zien waar een foto origineel vandaan komt en of hij echt bij het artikel hoort.</p>
+            </div>
+ 
+            <!-- Checklist -->
+            <div class="fc-checklist" style="animation-delay: 0.2s">
+                <h3>✅ Check-list</h3>
+                <ul>
+                    <li><span class="check">✓</span> Is de bron bekend en betrouwbaar?</li>
+                    <li><span class="check">✓</span> Heeft het artikel een auteur?</li>
+                    <li><span class="check">✓</span> Is de datum recent?</li>
+                    <li><span class="check">✓</span> Staat het ook op andere sites?</li>
+                    <li><span class="check">✓</span> Kloppen de foto's bij het verhaal?</li>
+                    <li><span class="check">✓</span> Is de titel niet overdreven?</li>
+                    <li><span class="check">✓</span> Worden er bronnen genoemd?</li>
+                    <li><span class="check">✓</span> Is de tekst objectief geschreven?</li>
+                </ul>
+            </div>
+ 
+        </div>
+ 
+        <!-- Knop onderaan -->
+        <div class="button-wrapper">
+            <a href="quiz.html" class="quiz-button">Test jezelf met de quiz! →</a>
+        </div>
+ 
+    </main>
+ 
+    <script>
+        fetch("footer.html")
+        .then(response => response.text())
+        .then(data => {
+            document.body.insertAdjacentHTML('beforeend', data);
+        });
+    </script>
+ 
+</body>
+</html>
+
 </body>
 </html>
