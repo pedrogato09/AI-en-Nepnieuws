@@ -3,48 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Welkom op FakeOrFact</title>
+    <meta name="description" content="Leer hoe je nepnieuws en AI-content herkent — tips, quizzes en uitleg van AI Detect.">
+    <meta name="theme-color" content="#1e1b4b">
+    <link rel="icon" href="favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Sora:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
-<body class="home-body">
-    
-    <div id="header"></div>
-    
+<body class="ai-body">
+     <header class="header">
+    <nav class="navbar">
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="Nepnieuws.html">Nepnieuws</a></li>
+            <li><a href="over-ai.html">Over AI</a></li>
+            <li><a href="fact-check.html">Fact Check</a></li>
+            <li><a href="quiz.html">Quiz</a></li>
+            <li><a href="tips.html">Tips</a></li>
+            <li><a href="over-ons.html">Over ons</a></li>
+        </ul>
+         <div class="logo">AI Detect</div>
+    </nav>
+</header>
+
     <script>
         fetch("header.html")
         .then(response => response.text())
         .then(data => {
             document.getElementById("header").innerHTML = data;
         });
-     
     </script>
-    <section class="hero">
-    <h1>Welkom op FakeOrFact</h1>
-    <p>Leer hoe je nepnieuws en AI-content herkent</p>
-</section>
-    <div class="content-wrapper">
-        <div class="text-section">
-        <h3>waar gaat ovs website over</h3>
-        <p class="ovelig">Welkom op onze website! Deze site staat volledig in het teken van nepnieuws en AI
 
-In de wereld van vandaag wordt informatie razendsnel gedeeld via sociale media. Soms is die informatie echt, maar steeds vaker komen we nepnieuws tegen. Met de opkomst van slimme AI-technologie is het tegenwoordig nóg makkelijker geworden om teksten, foto's en video's te maken die net echt lijken, maar dat niet zijn. <br>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <main id="main">
+        <section class="hero">
+            <h1>Welkom op FakeOrFact</h1>
+            <p>Leer hoe je nepnieuws en AI-content herkent</p>
+        </section>
+
+        <div class="content-wrapper">
+            <div class="text-section">
+                <h3>Waar gaat onze website over</h3>
+                <p class="ovelig">Welkom op onze website! Deze site staat volledig in het teken van nepnieuws en AI.
+
+Welkom op onze website! Deze site staat volledig in het teken van nepnieuws en AI. In de wereld van vandaag wordt informatie razendsnel gedeeld via sociale media. Soms is die informatie echt, maar steeds vaker komen we nepnieuws tegen. Met de opkomst van slimme AI-technologie is het tegenwoordig nóg makkelijker geworden om teksten, foto's en video's te maken die net echt lijken, maar dat niet zijn. <br>
+
 
 Als toekomstige Software Developers bouwen wij de technologie van morgen. Daarom vinden wij het belangrijk om te begrijpen hoe informatie werkt, wat de impact van nepnieuws is op de samenleving en hoe we AI op een verantwoorde manier kunnen gebruiken. Met deze website willen we jou informeren, uitleg geven en helpen om kritisch te blijven nadenken over wat je online leest en ziet.</p>
-    </div>
-    <div class="image-container">
-        <img class="image-home" src="home-page2.png" alt="Home Image">
-    </div>
-</div>
-<div class="button-wrapper">
-    <a href="quiz.html" class="quiz-button">Doe de quiz! →</a>
+            </div>
+            <div class="image-container">
+                <img class="image-home" src="home-page2.png" alt="Home Image">
+            </div>
+        </div>
+        <div class="button-wrapper">
+            <a href="quiz.html" class="quiz-button">Doe de quiz! →</a>
+        </div>
+    </main>S
 
-</div>
-<script>
-    fetch("footer.html")
-    .then(response => response.text())
-    .then(data => {
-        document.body.insertAdjacentHTML('beforeend', data);
-    });
-</script>
-</div></body>
+</body>
 </html>

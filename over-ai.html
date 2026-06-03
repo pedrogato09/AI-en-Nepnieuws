@@ -1,20 +1,28 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Over AI - AI Detect</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Sora:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body class="ai-body">
-    <div id="header"></div>
+    <header class="header">
+        <nav class="navbar">
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="Nepnieuws.html">Nepnieuws</a></li>
+                <li><a href="over-ai.html">Over AI</a></li>
+                <li><a href="fact-check.html">Fact Check</a></li>
+                <li><a href="quiz.html">Quiz</a></li>
+                <li><a href="tips.html">Tips</a></li>
+                <li><a href="over-ons.html">Over ons</a></li>
+            </ul>
+            <div class="logo">AI Detect</div>
+        </nav>
+    </header>
 
-    <script>
-        fetch("header.html")
-        .then(response => response.text())
-        .then(data => {
-            document.getElementById("header").innerHTML = data;
-        });
-    </script>
     <!-- SECTIE 1: Wat is AI? -->
     <section class="ai-section">
         <div class="ai-intro">
@@ -73,12 +81,6 @@
 
     </section>
 
-<script>
-    fetch("footer.html")
-    .then(response => response.text())
-    .then(data => {
-        document.body.insertAdjacentHTML('beforeend', data);
-    }); 
-</script>
+
 </body>
 </html>
